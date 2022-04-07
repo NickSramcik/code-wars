@@ -4,7 +4,7 @@
 // If both characters are the same case, return 1
 // If both characters are letters, but not the same case, return 0
 
-/
+// Fixing commit dates for old coding challenges (all were uploaded at once on Apr 14th and had incorrect dates)
 
 function sameCase(a, b){
     if (a.toLowerCase() === a.toUpperCase()  || 
