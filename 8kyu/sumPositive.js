@@ -1,3 +1,6 @@
+// Pass in an array of numbers
+// Return a sum of the positive numbers of the input array
+
 function positiveSum(arr) {
     return arr.length > 0 ? arr.reduce((acc, cur) => {(cur > 0) ? acc + cur : acc}, 0) : 0
   }
