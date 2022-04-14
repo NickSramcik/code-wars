@@ -1,5 +1,11 @@
 // Simple, remove the spaces from the string, then return the resultant string.
 
+//Pass in a string with spaces
+//Return that string with the spaces removed
+//'Ogres are like onions' -> 'Ogresarelikeonions'
+
+//Replace the spaces with nothing and return
+
 const noSpace = str => str.replaceAll(' ', '')
 
 
