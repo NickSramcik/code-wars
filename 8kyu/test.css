@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Determination Sans";
+    src: url("DeterminationSansWebRegular.ttf");
+  }
+  
+  @font-face {
+    font-family: "Papyrus";
+    src: url("Papyrus.ttf");
+  }
+  
+  .dialogue .narrate[data-character="frisk_and_friends"] {
+    /*Narrated text is undertale font*/
+    font-family: "Determination Sans";
+    font-size: 1.25em;
+  }
+  .dialogue .orange[data-character="frisk_and_friends"] {
+    /*Orange text for emphasis*/
+    font-family: "Determination Sans";
+    font-size: 1.25em;
+    color: #FD8C2F;
+  }
+  
+  .dialogue .pap[data-character="frisk_and_friends"] {
+    /*Papyrus Font for Papyrus*/
+    font-family: "Papyrus";
+    font-size: 1em;
+    line-height: 80%;
+    font-weight: 700;
+  }
+
+
+
+  .dialogue .my-custom-style[data-character="my-character"][data-marker-enable]
+{
+    /* This CSS rule is only applied if the marker "css_enable" is set. */
+}
+/* Make the entire dialogue bubble for "my-character" have a grey background: */
+
+
+.dialogue-bubble[data-character="frisk_and_friends"][data-marker-narrate] {
+    background: black;
+}
