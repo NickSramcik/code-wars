@@ -30,4 +30,4 @@ function removeEveryOther(arr){
 // Checking if i % 2 is falsey is the same as checking that it equals 0
 // element argument can be made an underscore to show it isn't needed
 
-const removeEveryOther = arr => arr.filter((_, i) => !(i % 2);
+const removeEveryOther = arr => arr.filter((_, i) => !(i % 2))
