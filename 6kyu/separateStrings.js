@@ -39,4 +39,3 @@ const sepStr = str => {
         arr[i] = str.split(' ').map(e => e[i] || '')
     }return arr
 }
-
