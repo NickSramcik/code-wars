@@ -24,10 +24,9 @@ function accum(s) {
 
 // Combine into one line
 
-const accum = s => s.split('').map((e, i) => 
-    e.toLowerCase().repeat(i + 1)).map(e => e[0].toUpperCase() + e.slice(1)).join('-')
+// const accum = s => s.split('').map((e, i) => e.toLowerCase().repeat(i + 1)).map(e => e[0].toUpperCase() + e.slice(1)).join('-')
 
-// Use repeat for the slice to condense
+// Replace the slice with the repeat
 
 function accum(s) {
     return s.split('').map((e, i) => e[0].toUpperCase() + e.toLowerCase().repeat(i)).join('-')
