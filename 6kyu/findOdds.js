@@ -45,6 +45,7 @@
 
 
 //Somehow this works
+//^ is an XOR operator that messes with binary storage of each number. x ^ 0 = x, and x ^ x = 0. The even numbers basically cancel out leaving only the odd number. 
 const findOdd = arr => arr.reduce((acc, cur) => acc ^ cur);
 
 //Sort the array first, then subtract each element from the last. All the even numbers cancel out leaving only the odd. 
