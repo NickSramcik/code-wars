@@ -20,6 +20,7 @@ function toWeirdCase(str){
 
 // One Line
 
-const toWeirdCase = s => s.split(' ').map(e => e.split('').map((e, i) => i%2 ? e.toLowerCase() : e.toUpperCase()).join('')).join(' ');
+const toWeirdCase = s => 
+    s.split(' ').map(e=>e.split('').map((e,i)=>i%2?e.toLowerCase():e.toUpperCase()).join('')).join(' ');
 
   
