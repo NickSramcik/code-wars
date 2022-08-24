@@ -1,7 +1,7 @@
 # Code Wars Challenges
-This is a repository filled with my daily coding challenges, from <a href="https://www.codewars.com/users/NickSramcik">Codewars.com</a>. I've completed over a hundred challenges, and I push my solutions to a new challenge every single day. 
+This is a repository filled with my daily coding challenges, from <a href="https://www.codewars.com/users/NickSramcik">Codewars.com</a>. I'm ranked in the top 15% of programmers worldwide with over 150 challenges completed. 
 
-![My codewars profile](https://i.imgur.com/evRQGXL.png)
+![My codewars profile](https://i.imgur.com/cVijup5.jpg)
 
 ## How It's Made:
 
