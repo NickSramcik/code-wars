@@ -26,5 +26,15 @@ function adjacentElementsProduct(arr) {
     for (i = 1; i < arr.length; i++) {
         const product = arr[i] * arr[i - 1];
         if (product > max) max = product;
+    }return max
+}
+
+// Refactoring with && short circuit
+
+function adjacentElementsProduct(arr) {
+    let max = -Infinity;
+    for (i = 1; i < arr.length; i++) {
+        const product = arr[i] * arr[i - 1];
+        product > max && (max = product);
     }return max;
 }
