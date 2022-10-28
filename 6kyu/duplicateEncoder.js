@@ -31,3 +31,21 @@ const duplicateEncode = str => {
     let arr = str.toLowerCase().split('');
     return arr.map((e, i) => arr.some((k, j) => e === k && i !== j) ? ')' : '(').join('');
 }
+
+// Using indexOf and lastIndexOf
+// Quadratic big O
+
+function duplicateEncode(str) {
+    return str.toLowerCase()
+              .split('')
+              .map((e, _, a) => a.indexOf(e) == a.lastIndexOf(e) ? '(' : ')')
+              .join('');
+}
+
+// Optimized using a hash map
+
+function duplicateEncode(word){
+    let count = {};
+    [...word.toLowerCase()].forEach(e => count[e] ? count[e] += 1 : count[e] = 1);
+    return word.toLowerCase().split('').map(e => count[e] > 1 ? ')' : '(').join('');
+}
