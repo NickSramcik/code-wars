@@ -8,7 +8,7 @@
 
 
 // Pass in a string of numbers and letters (nonempty)
-// Return the string with only numbers (in number form despite the prompt literally saying string)
+// Return the string with only numbers (in number form)
 // 'Shrek1 is2 king3' -> '123'
 
 // Split string into array, filter elements that are equal to number self, stringify and return
