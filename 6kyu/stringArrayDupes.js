@@ -19,4 +19,4 @@ const dup = s => s.map(e => rmDup(e));
 
 // Refactored into one line
 
-const dup = a => a.map(w => [...w].filter((e, i, a) => e != a[++i]).join(''));
+const dup2 = a => a.map(w => [...w].filter((e, i, a) => e != a[++i]).join(''));
