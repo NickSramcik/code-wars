@@ -49,3 +49,30 @@ class Queue {
         return this.q.length;
     };
 }
+
+
+// Using objects instead of arrays
+
+class Queue {
+  constructor() {
+    this.storage = {};
+    this.head = 0;
+    this.tail = 0;
+  };
+  
+  enqueue(item) {
+    this.storage[this.tail] = item;
+    this.tail++;
+  };
+  dequeue() {
+    const removed = this.storage[this.head];
+    delete this.storage[this.head];
+    this.head++;
+    return removed;
+  };
+  size() {
+    const length = this.tail - this.head;
+    if (length < 0) return 0;
+    return length;
+  };
+}
