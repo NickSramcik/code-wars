@@ -47,11 +47,13 @@ function tripledouble(num1, num2) {
 // Using .some() method
 // + is added in front of return to convert boolean true/false to number 0/1
 
-function tripledouble(n1, n2) {
-    const nums = [...Array(10).keys()];
+function tripledouble(num1, num2) {
+    const nums = [...Array(10).keys()],
+          n1 = String(num1),
+          n2 = String(num2);
     
     return +nums.some(digit => 
-        String(n1).includes(String(digit).repeat(3)) &&
-        String(n2).includes(String(digit).repeat(2))
+        n1.includes(String(digit).repeat(3)) &&
+        n2.includes(String(digit).repeat(2))
     );
 }
