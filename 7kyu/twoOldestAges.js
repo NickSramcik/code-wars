@@ -22,3 +22,26 @@ function twoOldestAges(ages){
 //One liner
 
 const twoOldestAges = ages => ages.sort((a, b) => a - b).slice(-2);
+
+
+// Redux on Apr 12, 2023 for mock interview
+
+// Pass in an array of positive integers 
+// Return another array of 2 positive integers: two largest numbers
+// [1, 2, 10, 8] --> [8, 10]
+
+// Sort the input array from largest to smallest
+// Return an array: [2nd value, 1st value]
+
+function twoOldestAges(ages){
+    let result = ages.sort((a, b) => b - a);
+    return [result[1], result[0]];
+}
+
+
+// Sort the input array from smallest to largest 
+// Slice that array to leave us with the last 2 values, and return it
+
+const twoOldestAges = ages => ages.sort((a, b) => a - b).slice(ages.length - 2, ages.length);
+
+console.log('Onions have layers')
