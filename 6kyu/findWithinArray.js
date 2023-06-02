@@ -20,7 +20,7 @@ var findInArray = function(array, iterator) {
     }
 
     return -1;
-};
+}
 
 // Refactored using arrow function and findIndex
 
