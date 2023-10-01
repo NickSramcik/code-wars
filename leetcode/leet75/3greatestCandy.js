@@ -39,6 +39,18 @@ var kidsWithCandies = function(candies, extraCandies) {
     return candies.map(kid => kid + extraCandies >= maxCandy);
 };
 
+// Refactored to push values to empty array
+var kidsWithCandies = function(candies, extraCandies) {
+    const maxCandy = Math.max(...candies),
+          result = [];
+
+    for (kid of candies) {
+        result.push(kid + extraCandies >= maxCandy);
+    };
+
+    return result
+};
+
 // Test Cases
 
 console.log(kidsWithCandies([2,3,5,1,3], 3), '->', [true,true,true,false,true]);
