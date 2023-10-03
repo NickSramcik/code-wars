@@ -41,6 +41,35 @@ var reverseVowels = function(str) {
     return [...str].map(letter => isVowel(letter) ? vowels.pop() : letter).join('');
 };
 
+// Refactored with 2 pointers
+var isVowel = function(letter) {
+    const VOWELS = 'aeiou';
+    return VOWELS.includes(letter.toLowerCase());
+}
+
+var reverseVowels = function(str) {
+    const letters = [...str];
+    let left = 0,
+        right = str.length - 1;
+    
+    while (left < right) {
+        if (isVowel(letters[left])) {
+            if (isVowel(letters[right])) {
+                // Both pointers are vowels, swap 'em & advance both pointers
+                [letters[left], letters[right]] = [letters[right], letters[left]];
+                left++;
+                right--;
+            }
+            // Move right pointer to the left to find next vowel
+            else right--;
+        }
+        // Move left pointer to the right to find next vowel
+        else left++
+    }
+
+    return letters.join('');
+};
+
 // Test Cases
 
 console.log(reverseVowels('hello'), '->', 'holle');
