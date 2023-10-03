@@ -49,7 +49,7 @@ const reverseWords = string => string.split(' ').filter(Boolean).reverse().join(
 // Trim the input and split it into an array of words
 // Store an empty result string
 // Loop through the words backwards, not including the first word
-    // If current word is valid, and append each word to result string with a space
+    // If current word is valid, append it to result string with a space
 // Add first word to result string without a trailing space
 // Return result string
 
