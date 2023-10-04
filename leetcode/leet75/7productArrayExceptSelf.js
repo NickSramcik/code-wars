@@ -49,8 +49,8 @@ var productOfArray = function(array) {
 var productExceptSelf = function(nums) {
     // Store a product of the input array using reduce
     const product = productOfArray(nums);
-    // Map the input array, dividing product by current value, store it as new array
-    let result = nums.map((num, i) => {
+    // Map the input array, dividing product by current value, and return it
+    return nums.map((num, i) => {
         // If num is 0, get new product to avoid dividing by 0
         if (num == 0) {
             const prevProduct = productOfArray(nums.slice(0, i)),
@@ -59,8 +59,6 @@ var productExceptSelf = function(nums) {
         }
         return product / num;
     });
-    // Return result array
-    return result;
 };
 
 // Refactored for O(n) time complexity
