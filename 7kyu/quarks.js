@@ -42,3 +42,19 @@ class Quark {
         [this.color, otherQuark.color] = [otherQuark.color, this.color];
     }
 }
+
+// Refactored to validate colors/flavors
+class Quark {
+    constructor(color, flavor) {
+        const validColors = ['red', 'blue', 'green'],
+              validFlavors = ['up', 'down', 'strange', 'charm', 'top', 'bottom'];
+
+        this.color = validColors.includes(color) ? color : null;
+        this.flavor = validFlavors.includes(flavor) ? flavor : null;
+        this.baryon_number = 1/3;
+    }
+
+    interact(otherQuark) {
+        [this.color, otherQuark.color] = [otherQuark.color, this.color];
+    }
+}
