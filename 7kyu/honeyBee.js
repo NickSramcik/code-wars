@@ -31,7 +31,6 @@ function Hive() {
     this.pollen = 100;
 }
 
-//TODO: The amount of honey in the hive is not increasing.
 Hive.prototype.addPollen = function (pollen) {
     this.pollen += pollen;
 };
