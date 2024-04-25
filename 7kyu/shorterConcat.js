@@ -12,7 +12,7 @@
 // Otherwise, reverse a and concat b + a + b
 // Return result
 
-function shorterReverseLongerOld(a, b) {
+function shorterReverseLongerOldOld(a, b) {
     if (a.length < b.length) return a + b.split('').reverse('').join('') + a;
     return b + a.split('').reverse('').join('') + b;
 }
@@ -20,7 +20,18 @@ function shorterReverseLongerOld(a, b) {
 // Refactored
 
 const revStr = str => str.split('').reverse().join('');
-function shorterReverseLonger(a, b) {
+function shorterReverseLongerOld(a, b) {
     if (a.length < b.length) return a + revStr(b) + a;
     return b + revStr(a) + b;
+}
+
+// Refactored again
+
+function revConcat(short, long) {
+    const reversed = long.split('').reverse().join('');
+    return short + reversed + short;
+}
+
+function shorterReverseLonger(a, b) {
+    return a.length < b.length ? revConcat(a, b) : revConcat(b, a);
 }
