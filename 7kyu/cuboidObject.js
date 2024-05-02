@@ -40,3 +40,25 @@ class Cube extends Cuboid {
         super(length, length, length);
     }
 }
+
+// Refactored with a static method, rather than extending with a new constructor
+
+class Cuboid {
+    constructor(length, width, height) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+    }
+
+    get surfaceArea() {
+        return 2 * (this.length * this.width + this.width * this.height + this.height * this.length);
+    }
+
+    get volume() {
+        return this.length * this.width * this.height;
+    }
+
+    static cube(length) {
+        return new Cuboid(length, length, length)
+    }
+}
