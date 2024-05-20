@@ -88,7 +88,7 @@ function makeGood(str) {
     const stack = [];
 
     for (char of str) {
-        if (stack.length && isBad(char, stack[stack.length - 1])) {
+        if (stack.length && isBad(char, stack.at(-1))) {
             stack.pop();
         }
         else stack.push(char);
