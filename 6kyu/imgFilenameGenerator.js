@@ -35,3 +35,17 @@ function generateName() {
 
     return photoManager.nameExists(result) ? generateName() : result;
 }
+
+// Refactored using string bases
+// Works great if we're okay with numbers in our random filename
+// Base 36 uses 10 numerical symbols and 26 letter symbols (so all lowercase) 
+// We slice from 2 to 8 because an example result is '0.kmn7tdzn41' and we don't want the decimal in there
+
+const generateName = () => Math.random().toString(36).slice(2, 8);
+
+// Refactored to check for duplicates
+
+function generateName() {
+    const result = Math.random().toString(36).slice(2, 8);
+    return photoManager.nameExists(result) ? generateName() : result;
+};
