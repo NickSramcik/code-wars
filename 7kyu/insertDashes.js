@@ -25,7 +25,7 @@ function insertDash(num) {
     
     for (let i in num) {
         const current = num[i],
-              next = num[i + 1];
+              next = num[+i + 1];
 
         if (isOdd(current) && isOdd(next)) {
             result.push(current + '-') ;
