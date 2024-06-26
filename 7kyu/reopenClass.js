@@ -9,3 +9,7 @@
 String.prototype.myNewMethod = function() {
     return this.toUpperCase();
 }
+
+// Refactored
+
+String.prototype.myNewMethod = String.prototype.toUpperCase
