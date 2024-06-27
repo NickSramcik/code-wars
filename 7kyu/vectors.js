@@ -30,3 +30,19 @@ class Vector {
         return new Vector(this.x + otherVector.x, this.y + otherVector.y);
     }
 }
+
+// Refactored
+
+class Vector {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    add(otherVector) {
+        const newX = this.x + otherVector.x,
+              newY = this.y + otherVector.y;
+        
+        return new Vector(newX, newY);
+    }
+}
