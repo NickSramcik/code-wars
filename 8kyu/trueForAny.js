@@ -10,3 +10,7 @@
 function any(arr, func) {
     return arr.some(x => func(x));
 }
+
+// Refactored
+
+const any = (arr, fn) => arr.some(fn);
