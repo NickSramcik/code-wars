@@ -4,7 +4,7 @@
 // check -> return current count
 // increment -> count += 1
 
-function Counter() {
+function _Counter() {
     let count = 0;
 
     this.check = function() {
@@ -14,3 +14,19 @@ function Counter() {
         count += 1;
     }
 };
+
+// Refactored using Class syntax
+
+class Counter {
+    constructor() {
+        this.count = 0;
+    }
+
+    check() {
+        return this.count;
+    }
+
+    increment() {
+        this.count++
+    }
+}
