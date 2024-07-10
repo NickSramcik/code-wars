@@ -15,3 +15,16 @@ function divCon(arr) {
 
     return numSum - stringSum;
 }
+
+// Refactored for slightly better time complexity
+
+function divCon(arr) {
+    let result = 0;
+
+    for (x of arr) {
+        if (typeof x == 'number') result += x;
+        else result -= Number(x);
+    };
+
+    return result;
+}
