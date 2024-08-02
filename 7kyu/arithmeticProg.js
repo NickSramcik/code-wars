@@ -28,6 +28,14 @@ function arithmeticSequenceElements(a, d, n) {
     return result.join(', ');
 }
 
+// Refactored
+
+function arithmeticSequenceElements(a, d, n) {
+    const result = [a];
+    while (--n) result.push(a += d);
+    return result.join(', ');
+}
+
 // Let result be an empty array
 // loop from a to d * n, in steps of d
 //    push i to result
