@@ -21,3 +21,18 @@ function checkThreeAndTwo(array) {
 
     return Object.keys(map).some(key => map[key] == 2) && Object.keys(map).some(key => map[key] == 3);
 }
+
+// Refactored for readability
+
+function checkThreeAndTwo(array) {
+    const map = {};
+
+    for (item of array) {
+        map[item] = map[item] + 1 || 1;
+    }
+
+    const containsTwo = Object.keys(map).some(key => map[key] == 2);
+    const containsThree = Object.keys(map).some(key => map[key] == 3);
+
+    return containsTwo && containsThree;
+}
