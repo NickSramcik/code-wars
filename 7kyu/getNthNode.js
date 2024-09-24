@@ -20,7 +20,7 @@ function Node(data) {
 }
 
 function getNth(node, index) {
-    if (!node) throw error;
+    if (!node) throw new Error('Invalid node at index: ' + index);
     if (index == 0) return node;
     return getNth(node.next, index - 1)
 }
@@ -33,6 +33,6 @@ function Node(data) {
 }
 
 function getNth(node, index) {
-    if (!node) throw error; 
+    if (!node) throw new Error('Invalid node at index: ' + index);
     return index ? getNth(node.next, index - 1) : node;
 }
