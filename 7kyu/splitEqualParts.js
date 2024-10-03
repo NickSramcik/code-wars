@@ -41,3 +41,18 @@ var splitInParts = function (str, partLength) {
 
     return result.trim();
 };
+
+// Refactored using string.slice
+
+var splitInParts = function (str, partLength) {
+    const result = [];
+    let part = '';
+
+    while (str.length) {
+        part = str.slice(0, partLength);
+        str = str.slice(partLength);
+        result.push(part);
+    }
+
+    return result.join(' ');
+};
