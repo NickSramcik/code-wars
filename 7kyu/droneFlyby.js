@@ -24,4 +24,8 @@ function flyBy(lamps, drone){
 
 // Refactored with map
 
-const flyBy = (lamps, drone) => [...lamps].map((lamp, i) => i < drone.length ? 'o' : lamp).join('');
+const flyByMap = (lamps, drone) => [...lamps].map((lamp, i) => i < drone.length ? 'o' : lamp).join('');
+
+// Refactored with fill
+
+const flyBy = (lamps, drone) => [...lamps].fill('o', 0, drone.length).join('');
