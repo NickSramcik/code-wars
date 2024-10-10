@@ -30,4 +30,12 @@ function validateWord(str) {
     return charCounts.every(count => count == charCounts[0]);
 }
 
-validateWord('abcda')
+// Refactored using set size
+// If every character appears in equal amounts, the input string length will be divisible by set size
+// Broken by this edge case: 'aaaabb'
+
+function validateWordNew(str, uncased = str.toLowerCase()) {
+    return uncased.length % new Set(uncased).size == 0;
+}
+
+console.log(validateWordNew('aaaabb'))
