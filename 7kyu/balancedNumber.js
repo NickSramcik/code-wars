@@ -59,4 +59,18 @@ function balancedNum(number) {
     return leftSum == rightSum ? 'Balanced' : 'Not Balanced';
 }
 
+// Refactored
+
+function balancedNum(number) {
+    const digits = number.toString();
+    let result = 0;
+
+    for (i = 0; i < digits.length / 2 - 1; i++) {
+        result += +digits[i];
+        result -= +digits[digits.length - 1 - i];
+    }
+
+    return result == 0 ? 'Balanced' : 'Not Balanced';
+}
+
 console.log('0123'.slice(0, 1))
