@@ -6,9 +6,9 @@
 // Complete the function pofi that returns i to the power of a given non-negative integer in its simplest form, as a string (answer may contain i).
 
 // pfoi(0) = '1'
-// pfoi(0) = 'i'
-// pfoi(0) = '-1'
-// pfoi(0) = '-i'
+// pfoi(1) = 'i'
+// pfoi(2) = '-1'
+// pfoi(3) = '-i'
 
 // Pass in a number n
 // Return a string
