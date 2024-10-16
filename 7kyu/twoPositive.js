@@ -27,3 +27,7 @@ function twoArePositive(a, b, c) {
     
     return false;
 }
+
+// Refactored using filter and length
+
+const twoArePositive = (...nums) => nums.filter(n => n > 0).length == 2;
