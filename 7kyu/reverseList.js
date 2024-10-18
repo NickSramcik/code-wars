@@ -8,3 +8,19 @@
 function reverseList(arr) {
     return arr.reverse();
 }
+
+// Refactored without using .reverse()
+// Let result be an empty array
+// While input has length:
+//   Pop the last value of the input and push it to result
+// Return result
+
+function reverseList(arr) {
+    const result = [];
+
+    while (arr.length) {
+        result.push(arr.pop());
+    }
+
+    return result;
+}
