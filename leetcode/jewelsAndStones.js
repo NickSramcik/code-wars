@@ -48,3 +48,38 @@ function numJewelsInStones(jewels, stones, map = {}) {
     [...jewels].forEach(jewel => map[jewel] = true);
     return [...stones].reduce((count, stone) => map[stone] ? ++count : count, 0);
 }
+
+// Redux
+
+// Pass in 2 strings
+// Return a number
+
+// let jewelMap be an empty set
+// let jewelCount be 0
+// Loop through each letter in the jewels string
+//   Add each character to jewelMap
+// Loop through each letter in the stones string
+//    If stone is in jewelMap, increment jewelCounter
+// Return jewelCounter
+
+var numJewelsInStones = function(jewels, stones) {
+    const jewelMap = new Set()
+    let jewelCount = 0;
+
+    for (jewel of jewels) {
+        jewelMap.add(jewel)
+    }
+
+    for (stone of stones) {
+        if (jewelMap.has(stone)) jewelCount++;
+    }
+
+    return jewelCount;
+};
+
+// Refactored
+
+var numJewelsInStones = function(jewels, stones) {
+    const jewelMap = new Set(jewels)
+    return [...stones].reduce((acc, cur) => acc + jewelMap.has(cur), 0);
+};
