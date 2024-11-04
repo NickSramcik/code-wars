@@ -16,7 +16,7 @@
 // If it is, add the pair to the pairs array
 // Otherwise, add the first number to the map
 
-function pairedSums(arr, sum) {
+function oldpairedSums(arr, sum) {
     const numsMap = {};
     let pairs = [];
   
@@ -34,3 +34,30 @@ function pairedSums(arr, sum) {
 console.log(pairedSums([1, 2, 2, 3, 4], 4), [[2, 2], [3, 1]])
 console.log(pairedSums([1, 4, 2, 5], 6), [[1, 5], [2, 4]])
 console.log(pairedSums([1, 10, 0, 15], 10), [[0, 10]])
+
+// Redux
+
+// Pass in an array of numbers and a number
+// Return an array of subarrays (length: 2)
+
+// Let nums be an empty set
+// Let pairs be an empty array
+// Loop through the input array
+//   Let diff be sum - num
+//   If diff is in the set, push [num, diff] to pairs
+//   Otherwise, add num to set
+// Return pairs
+
+function pairedSums(arr, sum) {
+    const pairs = [];
+    const nums = new Set();
+
+    for (let num of arr) {
+        const diff = sum - num;
+
+        if (nums.has(diff)) pairs.push([num, diff])
+        else nums.add(num);
+    }
+
+    return pairs;
+}
