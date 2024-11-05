@@ -35,3 +35,19 @@ function accum(s) {
 // One line
 
 const accum = s => s.split('').map((e, i) => e[0].toUpperCase() + e.toLowerCase().repeat(i)).join('-')
+
+// Redux
+
+// Pass in a string
+// Return a string
+
+// Convert the input string into an array of letters
+// Map the array such that each letter is uppercased and concatenated with the letter lowercased and repeated i times
+// Join the array of letters into a string separated with '-'
+// Return the result
+
+function accum(str) {
+	return str.split('')
+              .map((letter, i) => letter.toUpperCase() + letter.toLowerCase().repeat(i))
+              .join('-');
+}
