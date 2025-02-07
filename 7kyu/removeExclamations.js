@@ -41,6 +41,17 @@ function removeOld(string) {
 const exclamationCount = word => word.split('').filter(char => char == '!').length;
 const remove = string => string.split(' ').filter(word => exclamationCount(word) !== 1).join(' ');
 
+// Refactored using split for fun
+
+function removeNew(string) {
+    return string.split(' ')
+                 .filter(word => {
+                    const bangCount = word => word.split('!').length - 1;
+                    return bangCount(word) !== 1;
+               }).join(' ');
+} 
+
+
 // Test Cases
 
 console.log(remove("Hi!") == '')
